@@ -1,0 +1,273 @@
+@font-face {
+    font-family:'fu';
+    src: local('fu'), url(data:application/font-woff;base64,d09GRgABAAAAAAWpAAsAAAAABrQAAQAAAAAAAAAAAAAAAAAAAAAFlAAAABVPUy8yAAABdAAAAEcAAABgQwFnpmNtYXAAAAHYAAAAWAAAAJQBOgJxZ2FzcAAABYwAAAAIAAAACP//AANnbHlmAAACQAAAAZAAAAGgSfXtLmhlYWQAAAEIAAAANAAAADYi49pUaGhlYQAAATwAAAAgAAAAJA1GBF9obXR4AAABvAAAABwAAAAcHjADAGxvY2EAAAIwAAAAEAAAABABFgF8bWF4cAAAAVwAAAAYAAAAIAAKACFuYW1lAAAD0AAAAaUAAAKTAvWD/nBvc3QAAAV4AAAAEwAAACD/KgCWeNpjYGRgYADiukUznOL5bb4ycHIwgMB9ZrY1YFq405JB5P9j1rmsE4FcNpBaBgYAGn8KKnjaY2BkYGDb8i+O4R7rUwYRBhHWeQxAERTADgB9LASzeNpjYGRgYGBnUGBgYgABRgY0AAAEWwAseNpjYGblYJzAwMrAwDqL1ZiBgVEaQjNfZEhjEmJgYAJJYQUePgoKDA4MrgyRrLP+pTGcZdvCuAgozAiSYwGaBlEFAMjlCkkAAAAAAAQVAK4FrQCaBN0AFASmAK4F5QBIBQYArnjaY2BgYGaAYBkGRgYQSADyGMF8FgYXIM3DwMHABGS7MfgzBDGEMkT+/w8UdUXm/d/2f8v/tf9XAfXxMCAAC5DPxmACVi0K5qEDVjDJBiaZoGLMACA/D6MAAAAAABgAPABWAHAAqADQeNotjk0oBGEYx5/nnZltJR/DjMuGxk62bcthx2y5uBJydHOwuPhqNweJSXKQrzYXcXBYsWnSnqRYX+XgYw/S5LRRQojC5kIz73pXDv/DU//f8/8BQhKAexOiUACAiqj4WESF66etJOS3X9GNGa4Sp65+YqQdWAVWci+CxPrlAB6UKngtqIZ0xkgub02tLq6QeSTmFrpi9CsxN58QovbM0ufs7PsyN2Kvxs2NBNf990cC4M+FBXADKCIqBSigSB7xgT7RJD2g33hKJK7T2SPhVvvGuftjmCtvsO1Cxvj+ZVl4I+D0YDZAG0iX3z6+xGkLR5gxYwg05e6FVWERSqCa3TyRpTJeC6llej1RvdCIWrAKZakYvTV1qBM/PTPXULfSqG/F6ZlF+yOpodHd8ODe8NhOWFjYp9tWmqaO+BS2XF9g86GTejIm7mKJ58j4w2J+L++YZY5FIANoiqihgo2o16tehZclVwBFLYnuH/Shh5oDkzSdpW3kZMnYXCelzgfp0A+Mq8xtpq8XTYBfEdmI9njadZHBaxNBFMa/bdJgA4p48PyOCSRLuocqEpqWQCm0tNjEahEi63YyGdjsys4u1T/BP8BrD978MwriRa8evXsqhV56Efx2Myxe3OHt/t573/tm2AHwEN/gYfU8ZqzYQxMzx2v8Nhw38IiqFTfRqnkdPXQct5hNHbcxxFk53dxgtoVPjj3c8944XqPTT8cNunx33MSDmtfxCreOW2h7B47beO+9uL76/VlGHRlJp+vL8Mflti++zNMkl9GpyqxJE9n0B4N/WXYLXdhctnoSDIKgJyYxuQljyVSsQqvK6f50YezK5yK0EmUqzNW5FNYkWvZYHpeVNBOZZ+lS9o1e9A9TbSI/SpeTdydPXr88nkDwhdF5Hk/upvc/3KALn/lwlh/9wXbJx7+Ks7c7ekOPT7qYI0WCHDJ7+vErnuEUChksTFUXbHJiwPW/umAXBTTDli785T2+A3YCrpIN9YY9gxAx84xOMSPkhKr37/MKF9RYKuoz4aJSCaJqKmRN4Zx5UZ0k4b6CPace15qUJJVPRl6S9qnW9O/jkBXNLOL5o7L7F9/ieSgAAAB42mNgZgCD/+oM0xiwAAAoNAHAAAAAAAH//wACSExQRAEARkMJAAEAUDlo7WIAAAAA) format('woff')
+}
+html, body {
+
+    font-family:'Noto Sans SC', fu, 'Microsoft Yahei', 'Hiragino Sans GB', sans-serif
+}
+body:after {
+    z-index: 2;
+    content:"";
+    display: block;
+    position: fixed;
+    /* 使用 fixed 使其相对于视口固定 */
+    right: 0;
+    bottom: 0;
+    /* 确保图片在视口底部 */
+    width: 850px;
+    height: 280px;
+    background-image: url(https://resource.fuyeor.com/fer/images/banna.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: BannaOpacity 6s infinite;
+}
+@keyframes BannaOpacity {
+    0% {
+        opacity: 0.05;
+    }
+    25% {
+        opacity: 0.07;
+    }
+    50% {
+        opacity: 0.09;
+    }
+    75% {
+        opacity: 0.07;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+.comet {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, blue, purple);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: cometAnimation 20s linear infinite;
+    top: -100px;
+    left: 0px;
+    z-index:-10
+}
+.orbit {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #f0f0f0;
+    border-radius: 50%;
+    opacity: 0.5;
+    top: -250px;
+    left: -150px;
+    z-index:-11
+}
+@keyframes cometAnimation {
+    0% {
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
+    }
+}
+.translate_wrapper {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    background: #fff;
+    border-radius: 4px
+}
+.current_lang {
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden
+}
+.lang {
+    padding: 10px 15px
+}
+.lang.selected {
+    display: none
+}
+.lang img, .lang span.lang-txt {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #444444
+}
+.lang span.lang-txt {
+    position: relative;
+    top: -1px;
+    font-weight: 700
+}
+.lang img {
+    width: 20px;
+    margin-left: 0
+}
+.lang span span {
+    color: #999;
+    font-weight: 400
+}
+.lang span.fa {
+    font-size: 12px;
+    position: relative;
+    top: -1px;
+    margin-left: 3px
+}
+.more_lang {
+    transform: translateY(-20px);
+    opacity: 0;
+    cursor: pointer;
+    display: none;
+    -webkit-transition: all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+    -moz-transition: all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+    -o-transition: all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+    -ms-transition: all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+    transition: all .3s cubic-bezier(.25, 1.15, .35, 1.15)
+}
+.translate_wrapper.active .more_lang {
+    display: block
+}
+.more_lang.active {
+    opacity: 1;
+    transform: translateY(-0px)
+}
+.more_lang .lang:hover {
+    background: #5766b2;
+    color: #fff
+}
+.more_lang .lang:hover span {
+    color: #fff
+}
+.translate_wrapper:hover, .translate_wrapper.active, .content a:hover {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 14px;
+    border: 1px solid #f8f8f8;
+    -webkit-transition: all 0.3s cubic-bezier(0, .99, .44, .99);
+    -moz-transition: all 0.3s cubic-bezier(0, .99, .44, .99);
+    -o-transition: all 0.3s cubic-bezier(0, .99, .44, .99);
+    -ms-transition: all 0.3s cubic-bezier(0, .99, .44, .99);
+    transition: all 0.3s cubic-bezier(0, .99, .44, .99)
+}
+.translate_wrapper.active .lang {
+    border-bottom: 1px solid #eaeaea
+}
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    --bg-size: 200%;
+    --color-1: #999;
+    --color-2: hsl(221.25deg 72.73% 82.75%);
+    /* Background gradient, remains static */
+    background: linear-gradient(90deg, var(--color-1), var(--color-2), var(--color-1)) 0 0 / var(--bg-size) 100%;
+    /* Text gradient, with color stops for smooth transition */
+    color: transparent;
+    background-image: linear-gradient(135deg, #bdb9c3,
+    /* Start color */
+    #c09bff 33%,
+    /* Middle color 1 at 33% */
+    #4ea4ee 66%,
+    /* Middle color 2 at 66% */
+    #bdb9c3
+    /* End color */
+    );
+    -webkit-background-clip: text;
+    /* Required prefix for Safari and others */
+    background-clip: text;
+    text-shadow: 1px 1px #4cf8b830, -1px -1px #f8585830, 1px -1px #a392ff30, -1px 1px #e58bff30;
+}
+@media (prefers-reduced-motion: no-preference) {
+    h1 {
+        animation: dynamic-bg 8s linear infinite;
+    }
+    @keyframes dynamic-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
+    }
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #2d6a88;
+    line-height: 40px;
+    margin-top: 80px;
+    padding: 20px
+}
+.content li::marker {
+    content:""
+}
+.content div a {
+    color: #29F
+}
+.langs {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    background: #f8f8f8;
+    border-radius: 6px;
+    padding: 16px 0 16px
+}
+.langlist {
+    padding: 0;
+    margin: 0;
+    text-align-last: left;
+    width: 33%
+}
+.flag {
+    padding: 0 6px 0 0
+}
+.langlist a {
+    text-decoration: none;
+    padding-bottom: .13rem;
+    background-repeat: no-repeat;
+    background-size: 100% 2px, 0 2px, 0 2px;
+    background-position: 100% 100%, 0 100%, 0 100%;
+    transition: .2s ease;
+    text-decoration: underline;
+    text-underline-position: under;
+    font-weight: 400;
+    text-decoration: none;
+    padding-bottom: 3px
+}
+.langlist a:focus:after, .langlist a:hover:after {
+    background-image: url('data:image/svg+xml;utf8,<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.2418 0H10.1727V5.75816H40.2111L0 45.9693L4.03071 50L44.2418 9.78887V39.8273H50V5.75816V0H44.2418Z" fill="%239c1919"/></svg>');
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+.langlist a:hover {
+    color: #9c1919;
+    background-image: linear-gradient(#874da2, #c43a30), linear-gradient(transparent, transparent), linear-gradient(#874da2, #c43a30);
+    transition: 1.2s all;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-name: dynamic-link
+}
+.langlist a:after {
+    content:"";
+    position: relative;
+    right: 0;
+    vertical-align: middle;
+    top: -2px;
+    display: inline-block;
+    margin-left: 6px;
+    width: 10px;
+    height: 10px;
+    transition: 1.2s;
+    background-image: url('data:image/svg+xml;utf8,<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44.2418 0H10.1727V5.75816H40.2111L0 45.9693L4.03071 50L44.2418 9.78887V39.8273H50V5.75816V0H44.2418Z" fill="%230064bc"/></svg>');
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+@media(max-width: 768px) {
+    .langs {
+        padding:16px 30px 16px
+    }
+    .langlist {
+        width: 100%;
+        margin: 0 auto
+    }
+}
